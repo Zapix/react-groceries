@@ -1,7 +1,14 @@
-import React from 'react';
-import { fromJS } from 'immutable';
+import React, { PropTypes } from 'react';
+import { List } from 'immutable';
 import { defineMessages, FormattedMessage } from 'react-intl';
 import { GroceriesList, GroceriesPanel } from '../groceries';
+import { connect } from 'react-redux';
+
+import {
+  addGrocery,
+  updateGrocery,
+  deleteGrocery,
+} from '../../actions/groceries';
 
 const messages = defineMessages({
   welcome: {
@@ -11,8 +18,20 @@ const messages = defineMessages({
   },
 });
 
+function mapStateToProps(state) {
+  return {
+    groceries: state.groceries.get('groceries', new List()),
+  };
+}
 
-export default class Home extends React.Component {
+export class Home extends React.Component {
+  static propTypes = {
+    groceries: PropTypes.object,
+    onAddGrocery: PropTypes.func,
+    onSaveGrocery: PropTypes.func,
+    onDeleteGrocery: PropTypes.func,
+  }
+
   render() {
     return (
       <div>
@@ -24,13 +43,10 @@ export default class Home extends React.Component {
         <div className="row">
           <div className="col-md-12 col-xs-12">
             <GroceriesList
-              groceries={fromJS([
-                { title: 'Test item' },
-                { title: 'Test item 2' },
-              ])}
+              {...this.props}
             />
             <GroceriesPanel
-              onAddGrocery={() => console.log('add')}
+              {...this.props}
             />
           </div>
         </div>
@@ -38,3 +54,12 @@ export default class Home extends React.Component {
     );
   }
 }
+
+export const HomeContainer = connect(
+  mapStateToProps,
+  {
+    onAddGrocery: addGrocery,
+    onSaveGrocery: updateGrocery,
+    onDeleteGrocery: deleteGrocery,
+  }
+)(Home);

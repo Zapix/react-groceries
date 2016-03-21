@@ -13,7 +13,7 @@ import i18n from './i18n';
 
 const {
   Application,
-  Home,
+  HomeContainer,
 } = components;
 
 const initialState = {
@@ -33,7 +33,7 @@ function getRootChildren(props) {
     <IntlProvider key="intl" {...intlData}>
       <ReduxRouter>
         <Route component={Application}>
-          <Route path="/" component={Home} />
+          <Route path="/" component={HomeContainer} />
         </Route>
       </ReduxRouter>
     </IntlProvider>,

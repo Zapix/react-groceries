@@ -4,8 +4,8 @@ import { Button, ButtonToolbar, Glyphicon, Input } from 'react-bootstrap';
 export default class GroceryItem extends React.Component {
   static propTypes = {
     grocery: PropTypes.object.Required,
-    onSave: PropTypes.func,
-    onDelete: PropTypes.func,
+    onSaveGrocery: PropTypes.func,
+    onDeleteGrocery: PropTypes.func,
   }
 
   constructor() {
@@ -30,7 +30,10 @@ export default class GroceryItem extends React.Component {
 
   save() {
     const { grocery } = this.props;
-    this.props.onSave(grocery, this.state.title);
+    this.props.onSaveGrocery(grocery, this.state.title);
+    this.setState({
+      editable: false,
+    });
   }
 
   cancel() {
@@ -42,7 +45,8 @@ export default class GroceryItem extends React.Component {
   }
 
   delete() {
-    this.props.onDelete();
+    const { grocery } = this.props;
+    this.props.onDeleteGrocery(grocery);
   }
 
   handleChange(e) {
@@ -114,7 +118,7 @@ export default class GroceryItem extends React.Component {
             bsSize="xsmall"
             onClick={() => this.delete()}
           >
-            <Glyphicon glyph="trash" />&nbsp;edit
+            <Glyphicon glyph="trash" />&nbsp;delete
           </Button>
           </ButtonToolbar>
         </td>

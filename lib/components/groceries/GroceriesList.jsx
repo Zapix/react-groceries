@@ -6,13 +6,17 @@ import GroceriesListJson from './GroceriesListJson';
 export default class GroceriesList extends React.Component {
   static propTypes = {
     groceries: PropTypes.object.Required,
+    onSaveGrocery: PropTypes.func,
+    onDeleteGrocery: PropTypes.func,
   }
 
   renderListOfGroceries() {
-    const { groceries } = this.props;
+    const { groceries, onSaveGrocery, onDeleteGrocery } = this.props;
     return (
       <tbody>
-        {groceries.map((grocery) => <GroceryItem {...{ grocery }}/>)}
+        {groceries.map((grocery) => (
+          <GroceryItem {...{ grocery, onSaveGrocery, onDeleteGrocery }}/>
+        ))}
       </tbody>
     );
   }
