@@ -7,12 +7,11 @@ export default class GroceriesListJson extends React.Component {
 
   render() {
     const { groceries } = this.props;
-    const groceriesJSON = JSON.stringify({
-      groceries: groceries.toJS(),
-    });
+    const groceriesJSON = JSON.stringify(
+      groceries.toJS().map((item) => item.title),
+    );
     return (
       <div>
-        {groceriesJSON}
         <input
           type="hidden"
           value={groceriesJSON}
