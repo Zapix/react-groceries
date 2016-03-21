@@ -50,7 +50,6 @@ export default class Application extends React.Component {
         <div
           id="wrap"
         >
-          <NavigationContainer />
           <div
             id="main"
             className="container container-fluid"
@@ -59,7 +58,6 @@ export default class Application extends React.Component {
             {this.props.children}
           </div>
         </div>
-        <Footer />
       </div>
     );
   }
