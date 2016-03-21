@@ -1,0 +1,14 @@
+#main {
+    padding-top: 136px;
+}
+
+#app, #react-app, #layout {
+    height: 100%;
+    box-sizing: inherit;
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto!important;
+    margin-top: -80px;
+}

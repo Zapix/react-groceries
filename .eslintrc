@@ -1,0 +1,22 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "browser": true,
+    "mocha": true,
+    "jasmine": true,
+    "es6": true
+  },
+  "globals": {
+    "BASE_API": true,
+    "WS_URL": true,
+    "$": true,
+  },
+  "ecmaFeatures": {
+    "experimentalObjectRestSpread": true
+  },
+  "rules": {
+    "strict": 0
+  }
+}
