@@ -30,7 +30,7 @@ export default class GroceriesList extends React.Component {
               <th
                 className="col-md-8 col-xs-6"
               >
-                Items
+                Egendomar
               </th>
               <th
                 className="col-md-4 col-xs-6"
