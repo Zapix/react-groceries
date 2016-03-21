@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Button, ButtonToolbar, Glyphicon, Input } from 'react-bootstrap';
+import { Button, ButtonToolbar, Input } from 'react-bootstrap';
 
 export default class GroceryItem extends React.Component {
   static propTypes = {
@@ -64,8 +64,9 @@ export default class GroceryItem extends React.Component {
           <Input
             type="text"
             name="title"
+            bsSize="small"
             value={this.state.title}
-            placeholder="Grocery..."
+            placeholder="Okänt namn"
             onChange={(e) => this.handleChange(e)}
           />
         </td>
@@ -74,18 +75,18 @@ export default class GroceryItem extends React.Component {
         >
           <ButtonToolbar>
             <Button
-              bsStyle="primary"
-              bsSize="xsmall"
+              bsStyle="success"
+              bsSize="medium"
               onClick={() => this.save()}
             >
-              <Glyphicon glyph="disk" />&nbsp;save
+              Spara
           </Button>
           <Button
             bsStyle="default"
-            bsSize="xsmall"
+            bsSize="medium"
             onClick={() => this.cancel()}
           >
-            cancel
+            Avbryt
           </Button>
           </ButtonToolbar>
         </td>
@@ -103,22 +104,22 @@ export default class GroceryItem extends React.Component {
           {grocery.get('title')}
         </td>
         <td
-          className="col-md-8 col-xs-6"
+          className="col-md-8 col-xs-6 text-right"
         >
           <ButtonToolbar>
             <Button
               bsStyle="default"
-              bsSize="xsmall"
+              bsSize="small"
               onClick={() => this.edit()}
             >
-              <Glyphicon glyph="pencil" />&nbsp;Redigera
+              Redigera
           </Button>
           <Button
             bsStyle="danger"
-            bsSize="xsmall"
+            bsSize="small"
             onClick={() => this.delete()}
           >
-            <Glyphicon glyph="trash" />&nbsp;Ta bort
+            Ta bort
           </Button>
           </ButtonToolbar>
         </td>

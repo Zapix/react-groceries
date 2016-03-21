@@ -20,7 +20,7 @@ export default class GroceriesPanel {
               onClick={this.props.onAddGrocery}
               bsStyle="primary"
             >
-              Add
+              Lägg till egendom
             </Button>
           </ButtonToolbar>
         </div>
