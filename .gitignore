@@ -8,3 +8,5 @@ build
 coverage
 build.tar.gz
 fabfile.pyc
+
+.idea
