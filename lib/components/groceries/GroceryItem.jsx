@@ -107,18 +107,18 @@ export default class GroceryItem extends React.Component {
         >
           <ButtonToolbar>
             <Button
-              bsStyle="primary"
+              bsStyle="default"
               bsSize="xsmall"
               onClick={() => this.edit()}
             >
-              <Glyphicon glyph="pencil" />&nbsp;edit
+              <Glyphicon glyph="pencil" />&nbsp;Redigera
           </Button>
           <Button
             bsStyle="danger"
             bsSize="xsmall"
             onClick={() => this.delete()}
           >
-            <Glyphicon glyph="trash" />&nbsp;delete
+            <Glyphicon glyph="trash" />&nbsp;Ta bort
           </Button>
           </ButtonToolbar>
         </td>
