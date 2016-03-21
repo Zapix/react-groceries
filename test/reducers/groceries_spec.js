@@ -12,11 +12,11 @@ describe('Groceries Reducers', () => {
   it('Add first grocery', () => {
     checkGroceriesReducer(
       {},
-      { type: constants.ADD_GROCERY },
+      { type: constants.ADD_GROCERY, payload: {} },
       {
         counter: 1,
         groceries: [
-          { id: 0, title: 'new item' },
+          { id: 0, title: 'Egendom...' },
         ],
       }
     );
@@ -30,12 +30,31 @@ describe('Groceries Reducers', () => {
           { id: 2, title: 'test' },
         ],
       },
-      { type: constants.ADD_GROCERY },
+      { type: constants.ADD_GROCERY, payload: {} },
       {
         counter: 6,
         groceries: [
           { id: 2, title: 'test' },
-          { id: 5, title: 'new item' },
+          { id: 5, title: 'Egendom...' },
+        ],
+      }
+    );
+  });
+
+  it('Add element with set title', () => {
+    checkGroceriesReducer(
+      {
+        counter: 5,
+        groceries: [
+          { id: 2, title: 'test' },
+        ],
+      },
+      { type: constants.ADD_GROCERY, payload: { title: 'new' } },
+      {
+        counter: 6,
+        groceries: [
+          { id: 2, title: 'test' },
+          { id: 5, title: 'new' },
         ],
       }
     );
