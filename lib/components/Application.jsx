@@ -1,6 +1,4 @@
 import React, { PropTypes } from 'react';
-import { NavigationContainer } from './Navigation';
-import Footer from './Footer';
 import DisplayError from './DisplayError';
 import AsyncSocket from '../utils/AsyncSocket';
 
