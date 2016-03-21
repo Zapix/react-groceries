@@ -35,11 +35,6 @@ export class Home extends React.Component {
   render() {
     return (
       <div>
-        <div className="header">
-          <FormattedMessage {...messages.welcome}>
-            {text => <h1>{text}</h1>}
-          </FormattedMessage>
-        </div>
         <div className="row">
           <div className="col-md-12 col-xs-12">
             <GroceriesList
