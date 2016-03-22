@@ -5,7 +5,7 @@ import GroceriesListJson from './GroceriesListJson';
 
 export default class GroceriesList extends React.Component {
   static propTypes = {
-    groceries: PropTypes.object.Required,
+    groceries: PropTypes.object.isRequired,
     onSaveGrocery: PropTypes.func,
     onDeleteGrocery: PropTypes.func,
   }
@@ -15,7 +15,10 @@ export default class GroceriesList extends React.Component {
     return (
       <tbody>
         {groceries.map((grocery) => (
-          <GroceryItem {...{ grocery, onSaveGrocery, onDeleteGrocery }}/>
+          <GroceryItem
+            key={grocery.get('id')}
+            {...{ grocery, onSaveGrocery, onDeleteGrocery }}
+          />
         ))}
       </tbody>
     );

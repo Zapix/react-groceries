@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import DisplayError from './DisplayError';
-import AsyncSocket from '../utils/AsyncSocket';
 
 export default class Application extends React.Component {
 
@@ -21,10 +20,6 @@ export default class Application extends React.Component {
       isMenuActive: false,
       socketReady: 0,
     };
-    this.socket = new AsyncSocket(
-      () => this.setState({ socketReady: 1 }),
-      () => this.socketClose({ socketReady: 0 })
-    );
   }
 
   getChildContext() {

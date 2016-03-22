@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 export default class GroceriesListJson extends React.Component {
   static propTypes = {
-    groceries: PropTypes.array.Required,
+    groceries: PropTypes.object.isRequired,
   }
 
   render() {

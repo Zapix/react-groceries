@@ -3,7 +3,7 @@ import { Button, ButtonToolbar, Input } from 'react-bootstrap';
 
 export default class GroceryItem extends React.Component {
   static propTypes = {
-    grocery: PropTypes.object.Required,
+    grocery: PropTypes.object.isRequired,
     onSaveGrocery: PropTypes.func,
     onDeleteGrocery: PropTypes.func,
   }
