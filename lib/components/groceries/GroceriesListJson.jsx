@@ -14,6 +14,7 @@ export default class GroceriesListJson extends React.Component {
       <div>
         <input
           type="hidden"
+          name="items"
           value={groceriesJSON}
         />
       </div>
