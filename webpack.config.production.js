@@ -23,11 +23,6 @@ module.exports = {
       'WS_URL': process.env.WS_URL ? process.env.WS_URL: '"http://localhost:8080/sockjs/"',
       '__DEVTOOLS__': false
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false
-      }
-    }),
     new HtmlWebpackPlugin({
       title: 'Groceries',
       filename: 'index.html',
@@ -44,7 +39,7 @@ module.exports = {
       {test: /\.(js|jsx)$/, loaders: ['babel'], include: path.join(__dirname, 'lib')},
 
       // Required for bootstrap loader
-      { test: /bootstrap\/js\//, loader: 'imports?jQuery=jquery' },
+      { test: /bootstrap\/js\//, loader: 'empty-loader' },
 
       { test: /\.(woff|woff2)/,  loader: "empty-loader" },
       { test: /\.ttf/,    loader: "empty-loader" },

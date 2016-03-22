@@ -1,8 +1,4 @@
-import '../assets/stylesheets/index.less';
-
 import React, { PropTypes } from 'react';
-import { Route } from 'react-router';
-import { ReduxRouter } from 'redux-router';
 import { connect } from 'react-redux';
 import { IntlProvider } from 'react-intl';
 import { fromJS } from 'immutable';
@@ -12,7 +8,6 @@ import i18n from './i18n';
 
 
 const {
-  Application,
   HomeContainer,
 } = components;
 
@@ -31,11 +26,7 @@ function getRootChildren(props) {
   };
   return [
     <IntlProvider key="intl" {...intlData}>
-      <ReduxRouter>
-        <Route component={Application}>
-          <Route path="/" component={HomeContainer} />
-        </Route>
-      </ReduxRouter>
+      <HomeContainer />
     </IntlProvider>,
   ];
 }

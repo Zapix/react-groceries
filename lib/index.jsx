@@ -1,6 +1,3 @@
-import 'bootstrap-webpack';
-import '../assets/stylesheets/index.less';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
