@@ -45,7 +45,7 @@ export default class GroceriesPanel extends React.Component {
             <Input
               type="text"
               name="title"
-              placeholder="Egendom... "
+              placeholder="Benämning av egendom"
               value={newGrocery.title}
             />
           </div>
