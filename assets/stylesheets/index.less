@@ -2,24 +2,3 @@
 Use `border-box` properly:
 https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 */
-html { box-sizing: border-box; }
-*, *:before, *:after { box-sizing: inherit; }
-
-/* Global CSS */
-@import (css) "main.css";
-@import (css) "theme/theme.css";
-@import (css) "theme/ionicons.min.css";
-@import "../../node_modules/react-select/less/select.less";
-@import "../../node_modules/react-widgets/lib/less/react-widgets.less";
-
-
-@formErrorColor: #a94442!important;
-
-.form-group.has-error {
-  div.Select-control {
-    border-color: @formErrorColor;
-    div.Select-arrow {
-      color: @formErrorColor;
-    }
-  }
-}

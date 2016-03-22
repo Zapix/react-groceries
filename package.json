@@ -31,6 +31,7 @@
     "bootstrap": "^3.3.6",
     "bootstrap-webpack": "0.0.5",
     "classnames": "^2.2.3",
+    "empty-loader": "^1.0.1",
     "globalize": "^0.1.1",
     "history": "^1.13.1",
     "immutable": "^3.7.6",
