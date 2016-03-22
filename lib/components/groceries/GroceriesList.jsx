@@ -27,16 +27,16 @@ export default class GroceriesList extends React.Component {
   render() {
     return (
       <div>
-        <table className="table table-hover">
+        <table className="table table-hover small">
           <thead>
             <tr>
               <th
-                className="col-md-8 col-xs-6"
+                className=""
               >
                 Egendomar
               </th>
               <th
-                className="col-md-4 col-xs-6"
+                className=""
               >
                 &nbsp;
               </th>

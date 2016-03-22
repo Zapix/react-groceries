@@ -36,8 +36,8 @@ export default class GroceriesPanel extends React.Component {
   render() {
     const { newGrocery } = this.state;
     return (
-      <div className="row">
-        <div className="col-md-8 col-xs-6">
+      <div className="">
+        <div className="">
           <Input
             type="text"
             name="title"
@@ -46,7 +46,7 @@ export default class GroceriesPanel extends React.Component {
             onChange={(evt) => this.handleFormChange(evt)}
           />
         </div>
-        <div className="col-md-4 col-xs-6">
+        <div className="">
           <Button
             type="button"
             bsStyle="primary"
