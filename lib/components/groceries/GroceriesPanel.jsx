@@ -36,10 +36,7 @@ export default class GroceriesPanel extends React.Component {
   render() {
     const { newGrocery } = this.state;
     return (
-      <form
-        onChange={(evt) => this.handleFormChange(evt)}
-        onSubmit={(evt) => this.addGrocery(evt)}
-      >
+      <form>
         <div className="row">
           <div className="col-md-8 col-xs-6">
             <Input
@@ -47,12 +44,14 @@ export default class GroceriesPanel extends React.Component {
               name="title"
               placeholder="Benämning av egendom"
               value={newGrocery.title}
+              onChange={(evt) => this.handleFormChange(evt)}
             />
           </div>
           <div className="col-md-4 col-xs-6">
             <Button
-              type="submit"
+              type="button"
               bsStyle="primary"
+              onClick={(evt) => this.addGrocery(evt)}
             >
               Lägg till egendom
             </Button>
