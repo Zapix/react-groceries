@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
   <body>
+    <div id="groceries-data" data-json='{"counter": 1, "groceries": [{"id": 0, "title": "Test"}]}'></div>
     <div id="app"></div>
     {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
     <script type="text/javascript" src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry%}"></script>
